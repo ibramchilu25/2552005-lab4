@@ -68,7 +68,7 @@ async function fetchCountryInfo() {
             neighbouringCount.appendChild(img2)
         }
         
-        //console.log(data);
+        console.log(data);
 
     } catch(error) {
         console.log(error);
