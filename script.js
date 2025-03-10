@@ -1,7 +1,12 @@
 async function fetchCountryInfo() {
     try{
         const countryName = document.getElementById("nameOfCountry").value;
+
+        document.getElementById("country-info").innerHTML = "";
+        document.getElementById("bordering-countries").innerHTML = "";
         const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+
+
 
         if (!response.ok || countryName === ""){
             throw new Error("Could not find the country you are looking for")
